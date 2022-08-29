@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title></title>
+ </head>
+ <body>
+<script type="text/javascript">
+function waitAndshow() {
+ var systemdate = new Date();
+document.getElementById("clock").innerHTML = systemdate.toLocaleTimeString();
+ }
+function stopClock() {
+ clearInterval(intervalID);
+ }
+// defined waitAndshow function
+var intervalID = setInterval(waitAndshow, 3000);
+</script>
+ <p>Current Time : <span id="clock"></span></p>
+<button onclick="stopclock();"> Stop Clock</button>
+</body>
+ </html>
